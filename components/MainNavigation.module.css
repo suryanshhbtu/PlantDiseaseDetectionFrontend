@@ -1,0 +1,155 @@
+/* MainNavigation.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif:wght@300&display=swap');
+/* Apply the font to an element */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2px;
+    border-radius: 1.5rem;
+    color: white;
+    background-color: #1C8137;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 40px;
+    margin-right: 50px;
+    
+  font-family: 'Young+Serif', sans-serif;
+  }
+  
+  .menuIcon {
+    display: none; /* Hide menu icon by default */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .bar {
+    background-color: white;
+    height: 2px;
+    width: 30px;
+    margin: 4px 0; /* Increased margin for spacing */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navList {
+
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navItem {
+    margin-right: 20px;
+    color: white;
+    padding: 10px; /* Added padding */
+    font-size: 18px;
+    border-radius: 2rem;
+
+  }
+    .navItem:hover {
+        background-color: #00CE37;
+        border-radius: 2rem;
+  }
+  
+  .navItem:last-child {
+    margin-right: 0;
+  }
+  
+  .navItem a {
+    
+    color: white;
+    text-decoration: none;
+  }
+  .navItem a:visited {
+    
+    color: 1F7637;
+    text-decoration: none;
+  }
+  
+  .left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Show menu when menu icon is clicked */
+  .show {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Style the menu icon when the menu is open */
+  .open .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  
+  .open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .open .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+  /* Style for the logo container */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 2.5%; /* Adjust margin for spacing from the sides */
+}
+
+/* Style for the logo image */
+.logo {
+  width: 68px; /* Adjust the width as needed */
+  height: 68px; /* Adjust the height as needed */
+  margin-right: 10px; /* Adjust as needed for spacing */
+}
+
+/* Style for the logo name */
+.logoName {
+  font-size: 48px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust the font weight as needed */
+  color: azure; /* Adjust the color as needed */
+}
+  /* Media query for mobile responsiveness */ 
+  @media (max-width: 768px) {
+    .menuIcon {
+      display: flex;
+    }
+    .nav{
+      margin: 2%;
+    background-color:  #1C8137;
+    }
+    .left,
+    .right {
+      display: none; /* Hide menu items on mobile */
+      margin-left: auto;
+    }
+  
+    .navList{
+      display: block;
+    }
+    .navItem {
+      margin-right: 0;
+      color: aliceblue;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .navItem a:visited {
+    
+      color: 1F7637;
+      text-decoration: none;
+    }
+    .open{
+      display: block;
+    }
+    
+  }
+  
