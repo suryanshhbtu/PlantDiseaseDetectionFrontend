@@ -20,7 +20,7 @@ const CustomWebcam = () => {
     const videoConstraints = {
         width: 1280,
         height: 720,
-        facingMode: "user"
+        facingMode: 'environment', // 'environment' uses the back camera
     };
     const onRetakeHandler = () =>{
         setImgSrc(null);
@@ -40,7 +40,6 @@ const CustomWebcam = () => {
         setIsFetch(false);
     }
 
- 
     
     return (
         <div>
