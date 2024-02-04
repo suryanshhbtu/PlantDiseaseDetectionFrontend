@@ -29,8 +29,6 @@ const MainNavigation = () => {
                     <li className={styles.navItem}><a href="/">Home</a></li>
                     <li className={styles.navItem}><a href="/about">About</a></li>
                     <li className={styles.navItem}><a href="/contact">Contact</a></li>
-                    <li className={styles.navItem}><a href="/signin">Sign In</a></li>
-                    <li className={styles.navItem}><a href="/register">Register</a></li>
                 </ul>
             </div>
         </nav>

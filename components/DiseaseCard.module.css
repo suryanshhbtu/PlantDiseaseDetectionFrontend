@@ -1,0 +1,44 @@
+/* ImageComponent.module.css */
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto /* Center the container both vertically and horizontally */
+  }
+  
+  .image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info {
+    position: absolute;
+    bottom: 10px; /* Reduced the bottom margin */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px; /* Reduced the padding */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust the width of the info box */
+  }
+  
+  .diseaseType {
+    font-weight: bold;
+    font-size: 16px; /* Reduced the font size */
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Media Query for Responsive Design */
+  @media (max-width: 768px) {
+    .info {
+      font-size: 14px;
+      width: 90%;
+    }
+  }
+  
