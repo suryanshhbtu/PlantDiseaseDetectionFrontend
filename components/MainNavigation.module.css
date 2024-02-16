@@ -8,12 +8,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 2px;
-    border-radius: 1.5rem;
+    border-radius: 0.75rem;
     color: white;
     background-color: #1C8137;
     transition: all 0.3s ease-in-out;
-    margin-bottom: 40px;
-    margin-right: 50px;
+
+    background-color:  #1C8137;
+    padding: 1%;
+    margin: 0;
     
   font-family: 'Young+Serif', sans-serif;
   }
@@ -123,9 +125,16 @@
     .menuIcon {
       display: flex;
     }
+    
+.logoName {
+  font-size: 32px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust the font weight as needed */
+  color: azure; /* Adjust the color as needed */
+}
     .nav{
-      margin: 2%;
     background-color:  #1C8137;
+    padding: 2%;
+    margin: 0;
     }
     .left,
     .right {
@@ -151,5 +160,10 @@
       display: block;
     }
     
+    .navItem:hover {
+      background-color: #00CE37;
+      border-radius: 2rem;
+}
+
   }
   

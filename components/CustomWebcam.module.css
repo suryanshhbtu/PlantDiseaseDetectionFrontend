@@ -1,10 +1,41 @@
+/* CustomWebcam.module.css */
 
-.button{
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .button {
     background-color: #1C8137;
-    color: white;
-}
-
-.button:hover{
-    background-color: #00CE37;
-    
-}
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px; /* Adjust spacing between buttons */
+  }
+  
+  .button:hover {
+    background-color: #2da64d;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .container {
+      max-width: 100%; /* Adjust to fit the screen width */
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .button {
+      padding: 8px 16px; /* Adjust padding for smaller screens */
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+  

@@ -4,6 +4,8 @@ import MainNavigation from '@/components/MainNavigation';
 // components/About.js
 const About = () => {
     return (
+        <>
+        <MainNavigation/>
         <div className={styles.aboutContainer}>
                 <h1 className={styles.title}>About Our Plant Health Assistant App</h1>
             <div className={styles.div}>
@@ -25,6 +27,7 @@ const About = () => {
                 </ol>
             </div>
         </div>
+        </>
     );
 };
 

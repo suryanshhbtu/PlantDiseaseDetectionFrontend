@@ -1,12 +1,16 @@
 
-import { Inter } from "next/font/google";
+import MainNavigation from '@/components/MainNavigation'
+import React from 'react'
+import CustomWebcam from '@/components/CustomWebcam'
+import HomePageCard from '@/components/HomePageCard';
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+export default function index() {
   return (
-    <>
-    <h1>Hello! Friends welcome to my blog</h1>
-    </>
-  );
+    <div>
+        <MainNavigation/>
+        <HomePageCard>
+        <CustomWebcam/>
+        </HomePageCard>
+    </div>
+  )
 }

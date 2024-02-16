@@ -42,7 +42,7 @@ const CustomWebcam = () => {
 
     
     return (
-        <div>
+        <div className={styles.container}>
             {isCapture && <Webcam
                 audio={false}
                 height={320}
