@@ -1,0 +1,27 @@
+.div{
+    background-image: url('../../public/images/PlantcareLogo-circular_OPA.png');
+    background-repeat: no-repeat;
+    margin: auto;   
+    background-position: center;
+    background-size: contain;
+}
+/* components/About.module.css */
+
+.aboutContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 15px;
+  }
+  

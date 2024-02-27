@@ -1,6 +1,8 @@
 /* homepage.module.css */
 
 .card {
+  
+  background-image: url('../public/images/PlantcareLogo-circular_OPA.png');
     display: flex;
     flex-direction: column;
     align-items: center; /* Center horizontally */

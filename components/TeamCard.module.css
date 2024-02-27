@@ -1,0 +1,50 @@
+.card {
+    background-image: url('../public/images/PlantcareLogo-circular_OPA.png');
+    background-repeat: no-repeat;
+    margin: auto;   
+    background-position: center;
+    background-size: contain;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card h2 {
+    color: #333;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .card p {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .card ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card {
+      padding: 15px;
+    }
+    
+    .card h2 {
+      font-size: 20px;
+    }
+    
+    .card p, .card ul li {
+      font-size: 14px;
+    }
+  }
+  

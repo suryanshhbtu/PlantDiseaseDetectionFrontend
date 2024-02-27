@@ -16,7 +16,7 @@ const Fetch = (props) => {
         try {
             console.log(img);
             console.log(typeof img);
-            const response = await fetch("https://e4c7-45-115-191-105.ngrok-free.app/api/predict", {
+            const response = await fetch(" http://127.0.0.1:5000/api/predict", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

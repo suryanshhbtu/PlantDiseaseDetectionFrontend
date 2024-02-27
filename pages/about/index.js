@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/About.module.css'
+import styles from './About.module.css'
 import MainNavigation from '@/components/MainNavigation';
 // components/About.js
 const About = () => {
@@ -7,7 +7,7 @@ const About = () => {
         <>
         <MainNavigation/>
         <div className={styles.aboutContainer}>
-                <h1 className={styles.title}>About Our Plant Health Assistant App</h1>
+                <h1 className={styles.title}>Here is About </h1>
             <div className={styles.div}>
 
                 <p className={styles.description}>
