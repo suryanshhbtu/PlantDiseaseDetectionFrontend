@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './DiseaseCard.module.css';
 
 const DiseaseCard = (props) =>{
+
+ 
     return (
         <div className={styles.container}>
           <img className={styles.image} src={props.image} alt={`Disease: ${props.diseaseType}`} />

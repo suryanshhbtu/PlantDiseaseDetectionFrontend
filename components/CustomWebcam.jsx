@@ -2,17 +2,20 @@ import { useEffect, useState } from 'react';
 import styles from './CustomWebcam.module.css';
 import Fetch from './Fetch';
 import Webcam from "react-webcam";
+import DiseaseCardDetails from './DiseaseCardDetails';
 
 
 
-const CustomWebcam = () => {
+const CustomWebcam = (props) => {
 
     const [isCapture, setIsCapture] = useState(false);
     const [isFetch, setIsFetch] = useState(false);
     const [imgSrc, setImgSrc] = useState(null);
+    
+    const [displayDetails, setDisplayDetails] = useState(false);
     useEffect(() =>{
 
-     }, [isCapture]);
+     }, [isCapture, displayDetails]);
     const onClickHandler = () => {
         setIsFetch(false);
         setIsCapture(true);
@@ -37,10 +40,14 @@ const CustomWebcam = () => {
 
     const unsetFetchHandler = () =>{
         console.log("unsetterFetchHandler");
-        setIsFetch(false);
+        // setIsFetch(false);
     }
-
-    
+      const showDetailsHandler = () =>{
+        setDisplayDetails((displayDetail)=> !displayDetails);
+        setIsFetch((isFetch)=>!isFetch);
+        setImgSrc(null);
+        props.displayHandler();
+    }
     return (
         <div className={styles.container}>
             {isCapture && <Webcam
@@ -63,12 +70,13 @@ const CustomWebcam = () => {
                 )}
             </Webcam>}
             <br/>
-            {!isCapture && !imgSrc && <button className={styles.button} onClick={onClickHandler}>Open Camera</button>}
+            {!isCapture && !imgSrc && !displayDetails && <button className={styles.button} onClick={onClickHandler}>Open Camera</button>}
             {imgSrc && <img src = {imgSrc}/>}
             {imgSrc && <button className={styles.button} onClick={onRetakeHandler}>Retake</button>}
             {imgSrc && <button className={styles.button} onClick={processPhotoHandler}>Process</button>}
             {isFetch && <Fetch unsetFetchHandler={unsetFetchHandler}></Fetch>}
-            
+            {isFetch && <button onClick={showDetailsHandler}>Get Precaution And Cure</button>}
+            {displayDetails && <DiseaseCardDetails></DiseaseCardDetails>}
         </div>
     );
 };

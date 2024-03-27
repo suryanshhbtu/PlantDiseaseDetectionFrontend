@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import DiseaseCard from "./DiseaseCard";
+import DiseaseCardDetails from "./DiseaseCardDetails";
 
 
 
@@ -28,21 +29,26 @@ const Fetch = (props) => {
 
             const currdata = await response.json();
             setData(currdata.prediction);
-            dataa = currdata.prediction;
             console.log(currdata.prediction);
+            console.log("data logged "+data);
             props.unsetFetchHandler();
-            console.log("data logged");
+            if(currdata.prediction != null)
+            localStorage.setItem("disease", currdata.prediction);
         } catch {
             console.log("error");
         }
     }
     const [isLoading, setIsLoading] = useState(false);
 
+    
+
+
     console.log("xxxxx");
     return (
         <div>
             {isLoading && <p>Loading....</p>}
-            {<DiseaseCard image={img} diseaseType={data}></DiseaseCard>}
+            <DiseaseCard image={img} diseaseType={data}></DiseaseCard>
+            
         </div>
     );
 
