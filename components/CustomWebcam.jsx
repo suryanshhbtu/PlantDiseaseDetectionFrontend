@@ -75,7 +75,7 @@ const CustomWebcam = (props) => {
             {imgSrc && <button className={styles.button} onClick={onRetakeHandler}>Retake</button>}
             {imgSrc && <button className={styles.button} onClick={processPhotoHandler}>Process</button>}
             {isFetch && <Fetch unsetFetchHandler={unsetFetchHandler}></Fetch>}
-            {isFetch && <button onClick={showDetailsHandler}>Get Precaution And Cure</button>}
+            {isFetch && <button className={styles.button} onClick={showDetailsHandler}>Get Precaution And Cure</button>}
             {displayDetails && <DiseaseCardDetails></DiseaseCardDetails>}
         </div>
     );

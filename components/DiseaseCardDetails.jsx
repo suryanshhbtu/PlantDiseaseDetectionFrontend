@@ -7,11 +7,10 @@ const DiseaseCardDetails = (props) => {
     useEffect(() => {
         fetchData();
     }, []);
-
     const loc_disease = localStorage.getItem("disease");
     const fetchData = async () => {
         try {
-            const response = await fetch(`http://127.0.0.1:5000/api/predict/${loc_disease}`);
+            const response = await fetch(`https://e5b2-103-95-81-125.ngrok-free.app/api/predict/${loc_disease}`);
             const currdata = await response.json();
 
             setData(currdata);
