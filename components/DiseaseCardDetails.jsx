@@ -12,7 +12,7 @@ const DiseaseCardDetails = (props) => {
     const fetchData = async () => {
         console.log("Fetching d");
         try {
-            const response = await fetch(`http://127.0.0.1:5000/api/predict/${loc_disease}`, {
+            const response = await fetch(`https://4651-2409-4089-aecc-dd97-2d1b-45fd-d07f-6c22.ngrok-free.app/api/predict/${loc_disease}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
